@@ -68,7 +68,7 @@ Target host(s) requirements
     # This is my target vm to deploy openstack 
     
     * Copy public key from your Ansible installed host (master node) to target vm as:
-    ssh-copy-id /path/to/id_rsa.pub root@172.27.3.141
+    ssh-copy-id -i /path/to/id_rsa.pub root@172.27.3.141
    
 The deployment starts with command execution " ansible-playbook -i hosts site.yml -v" as shown below:
 
