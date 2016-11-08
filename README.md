@@ -12,7 +12,7 @@ Ansible scripts are used to deploy basic services of OpenStack Mitaka on Ubuntu 
  * horizon
 
 * neutron folder is the ansible role for deploying neutron service.
-* nova.yml is a part of nova role which i provided as a fix to instance boot issue.
+* nova.yml is a part of nova role which i provided as a fix to instance boot issue using crudini
 
 Target host(s) requirements
 
@@ -22,9 +22,10 @@ Target host(s) requirements
     # apt-get install software-properties-common
     # add-apt-repository cloud-archive:mitaka
     # apt-get update && apt-get dist-upgrade
+    # apt-get install python-openstackclient -y
     
     * SSH key passwordless authentication must be configured for root account.
-     Ensure you modify PermitRootLogin yes  in the /etc/ssh/sshd_config file
+     Ensure you have PermitRootLogin yes  in the /etc/ssh/sshd_config file
 
     * se_linux must be disabled.
     setenforce 0
