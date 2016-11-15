@@ -26,6 +26,7 @@ Target host(s) requirements
     
     * SSH key passwordless authentication must be configured for root account.
      Ensure you have PermitRootLogin yes  in the /etc/ssh/sshd_config file
+     Then change the password for root user using the command: passwd
 
     * se_linux must be disabled.
     setenforce 0
